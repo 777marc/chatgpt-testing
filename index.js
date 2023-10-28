@@ -13,17 +13,16 @@ async function main() {
     model: "gpt-3.5-turbo",
   });
 
-  console.log(typeof completion.choices[0].message.content)
-  // try {
-  //   const contents = completion.choices[0].message.content;
-
-  //   contents.forEach(function (item) {
-  //     console.log(item.question);
-  //   });
-  // } catch (error) {
-  //   console.log(contents);
-  //   console.log("error:", error);
-  // }
+  console
+  try {
+    //const contents = JSON.parse(completion.choices[0].message.content);
+    //console.log(typeof JSON.parse(completion.choices[0].message.content));
+    JSON.parse(completion.choices[0].message.content).questions.forEach(function (item) {
+      console.log(item.question);
+    });
+  } catch (error) {
+    console.log("error:", error);
+  }
 }
 
 main();
