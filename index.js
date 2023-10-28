@@ -13,15 +13,17 @@ async function main() {
     model: "gpt-3.5-turbo",
   });
 
-  try {
-    const contents = JSON.parse(completion.choices[0].message.content);
+  console.log(typeof completion.choices[0].message.content)
+  // try {
+  //   const contents = completion.choices[0].message.content;
 
-    contents.forEach(function (item) {
-      console.log(item.question);
-    });
-  } catch (error) {
-    console.log("error:", error);
-  }
+  //   contents.forEach(function (item) {
+  //     console.log(item.question);
+  //   });
+  // } catch (error) {
+  //   console.log(contents);
+  //   console.log("error:", error);
+  // }
 }
 
 main();
