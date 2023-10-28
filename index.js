@@ -16,10 +16,10 @@ async function main() {
   console
   try {
     //const contents = JSON.parse(completion.choices[0].message.content);
-    //console.log(typeof JSON.parse(completion.choices[0].message.content));
-    JSON.parse(completion.choices[0].message.content).questions.forEach(function (item) {
-      console.log(item.question);
-    });
+    console.log(JSON.parse(completion.choices[0].message.content));
+    // JSON.parse(completion.choices[0].message.content).questions.forEach(function (item) {
+    //   console.log(item.question);
+    // });
   } catch (error) {
     console.log("error:", error);
   }
